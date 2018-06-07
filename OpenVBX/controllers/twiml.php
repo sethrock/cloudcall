@@ -183,10 +183,7 @@ class Twiml extends MY_Controller {
 						set_cookie('sms-body', $sms, 60*60*3);
 					}
 					else
-					{
-						$sms = isset($_COOKIE['sms-body'])? $_COOKIE['sms-body'] : null;
-						set_cookie('sms-body', null, time()-3600);
-					}
+			
 					$sms_data = $flow->sms_data;
 					if(!empty($sms_data))
 					{
